@@ -8,6 +8,8 @@ import retail from'./assets/retail.png';
 import saas from './assets/saas.png';
 import subs from './assets/subs.png';
 import ecom from './assets/ecom.png';
+import ints from './assets/integrations.png';
+import sites from './assets/sites.png'
 
 
 const Header = () =>{
@@ -96,15 +98,16 @@ const Trio =(props)=>{
         {props.title}
       </span>
       <ul className="div-subtitle">
-        {props.p1}<br/>
-        {props.p2}<br/>
-        {props.p3}<br/>
-        {props.p4}<br/>
-        {props.p5}<br/>
+        <br/>{props.p1}<br/><br/>
+        {props.p2}<br/><br/>
+        {props.p3}<br/><br/>
+        {props.p4}<br/><br/>
+        {props.p5}<br/><br/>
       </ul>
-      <div className="fund">
+      <br/><br/>
+      <a href="" className="fund">
         {props.fund}
-      </div>
+      </a>
     </div>
   </div>
   )
@@ -147,8 +150,9 @@ const ContactContainer = () => {
 function App() {
   return (
     <div className="App">
-      <Header/>
+      
       <div className="container">
+      <Header/>
       <WelcomePage
         className= "intro-section"
       />
@@ -210,7 +214,7 @@ function App() {
         </div>
         <div className="container2">
         <Trio
-        className="section"
+        className="section-tr"
         title="Bank Loan"
         p1="Personal Guarantee Required"
         p2="Apply and close in 3-6 months"
@@ -218,7 +222,7 @@ function App() {
         p4="Negotiate a new loan"
         p5="Lots of documentation"/>
          <Trio
-        className="section"
+        className="section-tr-ooni"
         title="OONI"
         p1="No equity dilution. No Personal Guarantee"
         p2="
@@ -230,7 +234,7 @@ function App() {
         in seconds"
         fund="Get funding"/>
          <Trio
-        className="section"
+        className="section-tr"
         title="Venture Capital"
         p1="Equity Dilution"
         p2="
@@ -241,11 +245,51 @@ function App() {
         />
       
       </div>
+    
      
       </div>
-      <ContactContainer/>
+      <div className="container3">
+      <div className="headerc3">
+         We integrate with...
+         <br/><br/>
+          <li> 
+          We integrate securely with the tools you use everyday
+to understand your business like no-one else.
+          </li>
+        <br/>
+        <img src={ints} alt=''></img>
+        <br/>
+        <br/>
+        <li>
+         And many more...
+        </li> 
+        </div>
+      </div>
+      <div className="container6">
+        <div className="block1">
+        <br/><br/><br/><br/><br/><br/>
+          <div className="headerc3">
+          <li>Growth funding on your own terms </li>
+            </div>
+          <br/><br/>
+          <a href="" className="fund"> Get Started Now </a>
+        </div>
+        <div className="footer">
+          <div className="block1">
+            OONI Logo
+            <br/><br/>
+            <br/>            Growth funding on your own terms.
+            </div>
+          <div className="block2">
+            Elsewhere on the internet
+            <br/>
+            <img src={sites} alt=''></img>
 
-    
+          </div>
+
+        </div>
+      </div>
+      <ContactContainer/>
     </div>
   );
 }
